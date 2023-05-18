@@ -1,0 +1,90 @@
+body {
+  background: rgb(85, 144, 189);
+  background: linear-gradient(
+    90deg,
+    rgb(253, 200, 8) 0%,
+    rgb(255, 122, 39) 54%,
+    rgb(251, 71, 71) 82%
+  );
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Oswald", sans-serif;
+  padding: 50px;
+}
+
+h1{
+  color: aliceblue;
+  font-family: 'Lucida Sans';
+  border-radius: 10px;
+  padding: 10px;
+  background-color: rgb(0, 0, 0);
+  box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+  width: fit-content;
+    display:inline-block;
+  justify-content: center;
+  align-items: center;
+}
+
+.divpj1, .divpj2, .msj {
+  margin: 15px;
+}
+
+.divpj1, .divpj2{
+  border-radius: 10px;
+  padding: 10px;
+  background-color: white;
+  box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+  display:inline-block;
+  justify-content: center;
+  align-items: center;
+}
+
+.msj {
+  border-radius: 10px;
+  padding: 10px;
+  background-color: white;
+  box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+  height:fit-content;
+  width: fit-content;
+  display:inline-block;
+  justify-content: center;
+  align-items: center;
+}
+
+.input1, .input2 {
+  font-size: 20px;
+  border-radius: 8px;
+  border: none;
+  width: fit-content;
+  height: fit-content;
+}
+
+.btn1, .btn2 {
+   border: none;
+  color: rgb(255, 255, 255);
+  background-color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.btn1:hover, .btn2:hover {
+  background-color:#7374a3; 
+  color: white;
+  transition: .5s;
+}
+
+h1:hover {
+  background-color:#7374a3; 
+  transition: .5s;
+}
+
+.divpj1:hover, .divpj2:hover, .msj:hover {
+  background-color:#7374a3; 
+  transition: .5s;
+}
