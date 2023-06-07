@@ -1,0 +1,85 @@
+{
+  "motos": [
+    {
+      "id": 0,
+      "nombre": "Honda",
+      "modelo": "Tornado",
+      "motor": {
+        "cilindros": 1,
+        "cc": 250
+      },
+      "topspeed": 140
+    },
+    
+    {
+      "id": 1,
+      "nombre": "Honda",
+      "modelo": "Transalp",
+      "motor": {
+        "cilindros": 2,
+        "cc": 650
+      },
+      "topspeed": 180
+    },
+    {
+      "id": 2,
+      "nombre": "Corven",
+      "modelo": "TXR L",
+      "motor": {
+        "cilindros": 1,
+        "cc": 250
+      },
+      "topspeed": 133
+    },
+      {
+      "id": 3,
+      "nombre": "Motomel",
+      "modelo": "X3M",
+      "motor": {
+        "cilindros": 1,
+        "cc": 125
+      },
+      "topspeed": 85
+    },
+      {
+      "id": 4,
+      "nombre": "Guerrero",
+      "modelo": "TRIP FULL",
+      "motor": {
+        "cilindros": 1,
+        "cc": 110
+      },
+      "topspeed": 90
+    },
+      {
+      "id": 5,
+      "nombre": "Zanella",
+      "modelo": "New Fire",
+      "motor": {
+        "cilindros": 1,
+        "cc": 50
+      },
+      "topspeed": 70
+    },
+     {
+      "id": 6,
+      "nombre": "Yamaha",
+      "modelo": "YZF R1",
+      "motor": {
+        "cilindros": 4,
+        "cc": 1000
+      },
+      "topspeed": 297
+    },
+    {
+      "id": 7,
+      "nombre": "Yamaha",
+      "modelo": "DT",
+      "motor": {
+        "cilindros": 1,
+        "cc": 175
+      },
+      "topspeed": 138
+    }
+  ]
+}
