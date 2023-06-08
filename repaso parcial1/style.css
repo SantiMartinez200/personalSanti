@@ -1,0 +1,9 @@
+.bordesfinos {
+  border: 1px solid;
+}
+
+.bordesgruesos {
+  border: 5px solid;;
+}
+
+#map { height: 180px; }
