@@ -1,0 +1,110 @@
+html{
+  background-image: url("/Imagenes/resumen-borroso-estudio-degradado-verde-vacio-bien-uso-como-fondo-plantilla-sitio-web-marco-informe-empresarial.jpg");
+}
+
+#santi,#kevin {
+  display: flex;
+    text-align: center;
+  background-color: white;
+  width: 50%;
+  text-align: center;
+   border-radius: 5px;
+  padding: 3px;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  margin-top: 5px;
+  box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+  justify-content: center;
+}
+
+
+#texto{
+  background-color: white;
+  width: 50%;
+  border-radius: 5px;
+  padding: 3px;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+  box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5px;
+  margin-top: 20px;
+}
+
+#fotoSanti,#fotoKevin {
+  width: 200px;
+}
+
+
+#instagram,#whatsapp {
+  width: 150px;
+  margin-top: 30px;
+  transition: 120ms;
+}
+
+#instagram:hover{ 
+  transition: 120ms;
+  filter: drop-shadow(0px 5px 20px rgb(198, 2, 2));
+  border-radius: 28px;
+  padding: 3px;
+}
+
+#whatsapp:hover{
+  transition: 120ms;
+   filter: drop-shadow(0px 5px 20px rgb(0, 163, 57));
+  border-radius: 360px;
+  padding: 2px;
+}
+
+h1,h3 {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+#divLogo{
+  filter: drop-shadow(0px 1.5px 0.5px white)
+}
+
+.btn-3d {
+  padding: .6rem 1rem;
+  border: 1px solid #ffffffae;
+  border-radius: 4px;
+  background-color: #0b20d9;
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1.5rem;
+  text-shadow: 0 -1px 0 rgba(0,0,0,.5);
+  box-shadow: 0 1px 0 rgba(255,255,255,.5) inset,
+    0 1px 3px rgba(0,0,0,.2);
+  background-image: -webkit-gradient(linear,left top,left bottom,color-stop(10%,rgb(0, 30, 255)),to(#1700e7));
+  background-image: linear-gradient(rgb(0, 26, 255) 10%,#0036e7 100%);
+
+  position: relative;
+  top: -710px;
+  right: -89%;
+}
+
+.btn-3d:hover, .btn-3d:focus {
+  background-color: #1bbfe0;
+  background-image: -webkit-gradient(linear,left top,left bottom,color-stop(10%,#1000f0),to(rgb(43, 0, 255)));
+  background-image: linear-gradient(#0018f0 10%,rgb(0, 68, 255) 100%);
+}
+
+.btn-3d:active {
+  background-color: #00c1cf;
+  box-shadow: 0 2px 3px 0 rgba(0,0,0,.2) inset;
+  background-image: -webkit-gradient(linear,left top,left bottom,color-stop(10%,#0058f0),to(rgb(0, 30, 255)));
+  background-image: linear-gradient(#00a8f0 10%,rgb(0, 187, 255) 100%);
+}
+
+a {
+  text-decoration: none;
+  color: aliceblue;
+}
