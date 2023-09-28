@@ -1,5 +1,5 @@
 <?php
-include("../../TRABAJO_PRACTICO/BD/conn.php");
+include("../../QuienVino/BD/conn.php");
 $conectarDB = Conexion::connect();
 date_default_timezone_set('America/Argentina/Buenos_Aires');
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
@@ -93,7 +93,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
           <title>Consultar DNI</title>
           <link rel="stylesheet" href="../../QuienVino/styleIndex.css">
-          <link rel="stylesheet" href="../../TRABAJO_PRACTICO/css/bootstrap.css" />
+          <link rel="stylesheet" href="../../../QuienVino/Resources/css/bootstrap.min.css" />
         </head>
 
         <body>
@@ -113,8 +113,8 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
                 <thead>
                   <tr>
                     <th colspan="5" class="bg-primary text-white">Asistencias de:
-                      <?php $row = $queryAsistencias->fetch_assoc();
-                      print($row["nombre"] . " " . $row["apellido"]); ?>
+                      <?php $row = $queryAsistencias->fetch_all();
+                      echo($row[0][1] . " " . $row[0][2]); ?>
                     </th>
                   </tr>
                   <tr>
@@ -128,23 +128,22 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
                 <tbody>
                   <?php
                   forEach($row as $eachRow => $value) {
-                    echo $eachRow . ": " . $value;
                     ?>
                     <tr>
                       <td>
-                        <?php print($value["id"]); ?>
+                        <?php echo($value[4]); ?>
                       </td>
                       <td>
-                        <?php var_dump($eachRow["dni"]); ?>
+                        <?php echo($value[0]); ?>
                       </td>
                       <td>
-                        <?php var_dump($eachRow["nombre"]); ?>
+                        <?php echo($value[1]); ?>
                       </td>
                       <td>
-                        <?php var_dump($eachRow["apellido"]); ?>
+                        <?php echo($value[2]); ?>
                       </td>
                       <td>
-                        <?php var_dump($eachRow["fecha_asistencia"]); ?>
+                        <?php echo($value[6]); ?>
                       </td>
                     </tr>
                     <?php

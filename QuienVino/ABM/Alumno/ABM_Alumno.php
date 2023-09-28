@@ -125,8 +125,8 @@
   </div>
   </div>
   <div class="d-flex justify-content-center">
-    <button type="button" class="btn btn-light"><a href="../../../QuienVino/index.php">Volver al
-        inicio</a></button>
+  <a href="../../../QuienVino/index.php"><button type="button" class="btn btn-light text-primary">Volver al
+        inicio</button></a>
 
     <script src="../../ABM/Alumno/JS/confirmDelete.js"></script>
 

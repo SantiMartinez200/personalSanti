@@ -1,5 +1,5 @@
 <?php
-include("../../TRABAJO_PRACTICO/BD/conn.php");
+include("../../QuienVino/BD/conn.php");
 $conectarDB = Conexion::connect();
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
   ?>

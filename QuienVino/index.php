@@ -27,13 +27,10 @@
     </div>
   </div>
   <div class="container d-flex justify-content-center w-100  text-center mt-5">
-    <button class="btn btn-primary btn-lg border m-2"><a
-        href="../../QuienVino/ABM/Alumno/ABM_Alumno.php">Alumno</a></button>
-    <button class="btn btn-success btn-lg border m-2"><a
-        href="../../QuienVino/ABM/Profesor/ABM_Profesor.php">Profesor</a></button>
-    <button class="btn btn-danger btn-lg border m-2"><a
-        href="../../QuienVino/MarcarAsistencia/consultaDNI.php">Registrar
-        Asistencia</a></button>
+  <a href="../../QuienVino/ABM/Alumno/ABM_Alumno.php"><button class="btn btn-primary btn-lg border m-2">Alumno</button></a>
+  <a href="../../QuienVino/ABM/Profesor/ABM_Profesor.php"><button class="btn btn-success btn-lg border m-2">Profesor</button></a>
+  <a href="../../QuienVino/MarcarAsistencia/consultaDNI.php"><button class="btn btn-danger btn-lg border m-2">Registrar
+        Asistencia</button></a>
   </div>
 </body>
 <script src="../TRABAJO_PRACTICO/js/bootstrap.bundle.min.js"></script>

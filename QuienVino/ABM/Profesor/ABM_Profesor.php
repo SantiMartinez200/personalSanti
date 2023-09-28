@@ -102,8 +102,8 @@
               <td><a class="text-success"
                   href="../../../../QuienVino/ABM/Profesor/Modificacion.php?dni=<?php echo ($row["dni_profesor"]) ?>"
                   class="table__item__modify">Actualizar</a>
-                <a class="text-success" href="../../ABM/Profesor/Baja.php?id=<?php echo ($row["id"]) ?>"
-                  class="table__item__link">Eliminar</a>
+                <a class="text-success table__item__link"" href="../../ABM/Profesor/Baja.php?dni=<?php echo ($row["dni_profesor"]) ?>"
+                  >Eliminar</a>
               </td>
             </tr>
             <?php
@@ -113,11 +113,12 @@
       </table>
     </div>
   </div>
-  <div class="p-3 d-flex justify-content-center">
-    <button type="button" class="btn btn-light text-success"><a href="../../../QuienVino/index.php">Volver al
-        inicio</a></button>
+  <div class="d-flex justify-content-center">
+  <a href="../../../QuienVino/index.php"><button type="button" class="btn btn-light text-success">Volver al
+        inicio</button></a>
+        <script src="../../ABM/Profesor/JS/confirmDelete.js"></script>
   </div>
-  <script src="../../../QuienVino/ABM/Profesor/JS/confirmDelete.js"></script>
+  
 </body>
 
 </html>
