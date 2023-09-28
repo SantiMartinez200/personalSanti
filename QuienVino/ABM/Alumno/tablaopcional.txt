@@ -1,0 +1,32 @@
+    require("../../TRABAJO_PRACTICO/BD/conexion.php");
+    $querySelect = "SELECT * FROM alumno";
+    $myQuery = $connection->prepare($querySelect);
+    $myQuery->execute();
+    $objetoAlumnos = $myQuery->fetchAll();
+    //var_dump($objetoAlumnos);
+      echo ("<br>");
+    
+ 
+ 
+ ?>
+    <style> .estiloTabla{border: 1px solid} 
+  
+    </style>
+    <table name="unaTabla" title="REGISTRO A BORRAR" class="estiloTabla">
+      <tr class="estiloTabla"> 
+      <th class="estiloTabla">DNI</th>  
+      <th class="estiloTabla">NOMBRE</th>
+      <th class="estiloTabla">APELLIDO</th>
+      <th class="estiloTabla">FECHA_NACIMIENTO</th>
+      </tr> 
+ <tr> 
+      <?php
+        foreach ($objetoAlumnos as $cadaAlumno) {
+            ?>
+               <td class="estiloTabla"><?php print($cadaAlumno["dni"]); ?></td>
+               <td class="estiloTabla"><?php print($cadaAlumno['nombre']); ?></td>
+               <td class="estiloTabla"><?php print($cadaAlumno['apellido']); ?></td>
+               <td class="estiloTabla"><?php print($cadaAlumno['fecha_nacimiento']); ?></td> 
+        </tr>
+            <?php
+          }

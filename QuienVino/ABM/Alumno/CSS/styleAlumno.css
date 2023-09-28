@@ -1,0 +1,17 @@
+
+body:before {
+  filter: blur(2px);
+  content: "";
+  position: absolute;
+  height: 20%; 
+  width: 20%;
+ background: url("../../../Multimedia/ninos-escuela-levantando-mano-aula_107420-85511.png") ;
+  background-size: cover;
+  z-index: -1;
+  -webkit-transform: scale(5);
+  -webkit-transform-origin: top left;
+}
+
+a:link, a:visited, a:active{
+  text-decoration: none;
+}
