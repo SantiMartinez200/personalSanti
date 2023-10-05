@@ -1,0 +1,27 @@
+.redondo{
+  width: 45px;
+  height: 45px;
+  background-color: white;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.logo{
+  height: 35px;
+  width: 35px;
+  margin-top: 5px;
+  margin-left: 3px;
+}
+
+a:link, a:visited, a:active{
+  text-decoration: none;
+  color: white;
+}
+
+b{
+  text-decoration: none;
+}
+
+body{
+  background-color: rgb(61, 61, 61);
+}
