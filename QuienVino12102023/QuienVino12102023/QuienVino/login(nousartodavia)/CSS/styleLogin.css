@@ -1,0 +1,53 @@
+body {
+  font-family: monospace;
+  background: url("../../Multimedia/ninos-escuela-levantando-mano-aula_107420-85511.png");
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position: center;
+}
+
+.containerLogin{
+  width: 50%;
+  margin: 50px auto;
+  display: grid;
+  box-shadow: 0 0 10px #757474;
+}
+
+/*   STYLE INSERTAR    */
+
+.container__title {
+  margin: 0;
+  padding: 10px;
+  background: rgba(120, 65, 40, 1);
+  color: white;
+  font-size: 2em;
+  text-align: center;
+}
+
+.container__form {
+  width: 100%;
+  background-color: white;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container__label {
+  font-size: 1.2em;
+  width: 20%;
+}
+
+.container__input {
+  width: 25%;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  font-size: 1em;
+  padding: 5px;
+}
+
+.btn,
+.btn-outline-dark {
+  margin: 15px auto;
+}
+
+
