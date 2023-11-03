@@ -26,7 +26,7 @@ if (isset($_GET["dni"])) {
           <div class="container-fluid">
             <a href="../../../QuienVino/index.php">
               <div class="redondo">
-                <img src="../../../QuienVino/Multimedia/logo.png" class="logo">
+                <img src="../../../QuienVino/Multimedia/logo2.png" class="logo">
               </div>
             </a>
             <div class="d-flex justify-content-end">
@@ -89,11 +89,12 @@ if (isset($_GET["dni"])) {
           $listado = $ejecutar;
           ?>
           <div class="container col-10 mt-5 rounded">
-            <div id="textContainer" class="d-flex justify-content-center p-3 mb-2 bg-primary text-white rounded">
-              <h2 class="container__title">Modificar Alumno</h2>
-            </div>
+            
             <form class="form text-center p-3 mb-2 bg-light text-black col-12" action="../Alumno/modificacionControl.php"
               method="POST">
+              <div id="textContainer" class="d-flex justify-content-center p-3 mb-2 bg-primary text-white rounded">
+              <h2 class="container__title">Modificar Alumno</h2>
+            </div>
               <?php
               if (mysqli_fetch_assoc($listado) != NULL) {
                 mysqli_free_result($listado);
@@ -104,14 +105,14 @@ if (isset($_GET["dni"])) {
                   <input class="container__input" type="hidden" name="dniOriginal" id="iddni"
                     value="<?php print($row["dni"]); ?>">
                   <div class="row d-flex justify-content-center p-3">
-                    <div class="col d-flex p-3"><label for="iddni" class="p-2">DNI:</label><input class="container__input"
+                    <div class="col d-flex p-3 "><label for="iddni" class="p-2">DNI:</label><input class="container__input form-control w-50 border border-dark"
                         type="number" name="dniToCatch" id="iddni" value="<?php print($row["dni"]); ?>"></div>
                     <div class="col d-flex p-3"><label for="idnombre" class="p-2">Nombre:</label><input type="text" id="idnombre"
-                        class="container__input" name="nombre" value="<?php print($row["nombre"]); ?>"></div>
+                        class="container__input form-control w-50 border border-dark" name="nombre" value="<?php print($row["nombre"]); ?>"></div>
                     <div class="col d-flex p-3"><label for="idapellido" class="p-2">Apellido:</label><input type="text"
-                        id="idapellido" class="container__input" name="apellido" value="<?php print($row["apellido"]); ?> "></div>
+                        id="idapellido" class="container__input form-control w-50 border border-dark" name="apellido" value="<?php print($row["apellido"]); ?> "></div>
                     <div class="col d-flex p-3"><label for="idfecha" class="p-2">Fecha de nacimiento:</label><input type="date"
-                        id="idfecha" class="container__input" name="fechaNacimiento"
+                        id="idfecha" class="container__input form-control w-50 border border-dark" name="fechaNacimiento"
                         value="<?php echo date("Y-m-d", strtotime($row['fecha_nacimiento'])); ?>"></div>
                   </div>
                 <?php }

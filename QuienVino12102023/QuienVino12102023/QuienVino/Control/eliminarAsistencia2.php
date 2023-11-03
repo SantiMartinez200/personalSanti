@@ -12,6 +12,10 @@ $sql = Asistencia::deleteAsistencia($idEliminar);
 $ejecutar = $DB->ejecutar($sql);
 if ($ejecutar) {
   $DB->killConn();
+  header("Location: ../index.php");
 }
+
+?>
+
 
 ?>

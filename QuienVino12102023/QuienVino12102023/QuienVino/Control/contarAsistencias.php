@@ -20,7 +20,7 @@ include("../Clases/Parametro.php");
     <div class="container-fluid">
       <a href="../../QuienVino/index.php">
         <div class="redondo">
-          <img src="../Multimedia/logo.png" class="logo">
+          <img src="../Multimedia/logo2.png" class="logo">
         </div>
       </a>
       <div class="d-flex justify-content-end">
@@ -48,36 +48,50 @@ include("../Clases/Parametro.php");
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Contacto</a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item text-dark" href="https://www.instagram.com/santiago_martinez03/?utm_source=qr&igshid=NGExMmI2YTkyZg%3D%3D">Instagram</a></li>
-              <li><a class="dropdown-item text-dark" href="https://www.facebook.com/fede.garcia.37604/">Facebook</a></li>
-              <li><a class="dropdown-item text-dark" href="https://www.linkedin.com/in/santiago-mart%C3%ADnez-681b38238/">Linkedin</a></li>
+              <li><a class="dropdown-item text-dark"
+                  href="https://www.instagram.com/santiago_martinez03/?utm_source=qr&igshid=NGExMmI2YTkyZg%3D%3D">Instagram</a>
+              </li>
+              <li><a class="dropdown-item text-dark" href="https://www.facebook.com/fede.garcia.37604/">Facebook</a>
+              </li>
+              <li><a class="dropdown-item text-dark"
+                  href="https://www.linkedin.com/in/santiago-mart%C3%ADnez-681b38238/">Linkedin</a></li>
             </ul>
           </li>
         </ul>
       </div>
     </div>
     <div class="nav-item dropstart">
-        <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown"
-          aria-expanded="false">
-          <img src="../Multimedia/sliders2.svg" alt="" class="img-fluid config"
-            style="margin-right: 5px;">
-        </a>
-        <ul class="dropdown-menu text-dark">
-          <li><a class="dropdown-item text-dark" href="../Control/parametros.php">Parámetros</a></li>
-          <!-- <li><a class="dropdown-item text-dark" href="../../../QuienVino/Control/logOut.php">Cerrar Sesión</a></li> -->
-        </ul>
-      </div>
+      <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown"
+        aria-expanded="false">
+        <img src="../Multimedia/sliders2.svg" alt="" class="img-fluid config" style="margin-right: 5px;">
+      </a>
+      <ul class="dropdown-menu text-dark">
+        <li><a class="dropdown-item text-dark" href="../Control/parametros.php">Parámetros</a></li>
+        <!-- <li><a class="dropdown-item text-dark" href="../../../QuienVino/Control/logOut.php">Cerrar Sesión</a></li> -->
+      </ul>
+    </div>
   </nav>
   <?php
   ?>
   <div class="d-flex justify-content-center">
     <div class="col-10">
       <div class="container m-2">
-        <table class="table table-hover text-center">
+        <div class="w-100 position-relative start-0 bg-primary text-light rounded border text-center form-control">
+          <div class="d-flex align-items-center justify-content-center p-3 w-100">
+            <label for="dni" class="text-left round pr-5">
+              <h3 class="text-light mx-2">Buscar por DNI</h3>
+            </label>
+            <input type="number" name="dni" id="dni" class="form-control w-75 " onkeyup="buscarFetch(this.value)" autofocus>
+          </div>
+        </div>
+        <div class="d-block overflow">
+          <div id="buscar" class="text-center" style="height: auto"></div>
+        </div>
+        <table class="table table-hover text-center" id="vaciar">
           <thead>
             <tr>
               <th colspan="5" class="bg-primary text-white ">
-                <h4>Cuenta de asistencias</h4>
+                <h2>Cuenta de asistencias</h2>
               </th>
             </tr>
             <tr>
@@ -127,33 +141,39 @@ include("../Clases/Parametro.php");
                     $dias_de_clase = $ejecutar->fetch_all();
                     $traerParametros = Parametro::traerParametros();
                     $ejecutar = $conectarDB->ejecutar($traerParametros);
-                    $listadoParametros = $ejecutar->fetch_object();
-                    $dia = intval($dias_de_clase[0][0]);
-                    $promedioAlumno = round($asistencia * 100 / $dia);
-                    if ($promedioAlumno >= $listadoParametros->promedio_promocion) {
-                      echo "<div class='alert alert-success mt-1'> $promedioAlumno% </div>";
-                    } elseif (($promedioAlumno < 80) && ($promedioAlumno >= $listadoParametros->promedio_regularidad)) {
-                      echo "<div class='alert alert-warning mt-1'> $promedioAlumno% </div>";
+                    $listadoParametros = $ejecutar->fetch_all();
+                    //var_dump($listadoParametros);
+                    if ($listadoParametros == NULL) {
+                      echo "<div class='alert alert-danger mt-1'> Imposible calcular, parámetros requeridos. </div>";
                     } else {
-                      echo "<div class='alert alert-danger'> $promedioAlumno% </div>";
+                      $dia = intval($dias_de_clase[0][0]);
+                      $promedioAlumno = round($asistencia * 100 / $dia);
+                      if ($promedioAlumno >= $listadoParametros[0][2]) {
+                        echo "<div class='alert alert-success mt-1'> $promedioAlumno% </div>";
+                      } elseif (($promedioAlumno < 80) && ($promedioAlumno >= $listadoParametros[0][3])) {
+                        echo "<div class='alert alert-warning mt-1'> $promedioAlumno% </div>";
+                      } else {
+                        echo "<div class='alert alert-danger'> $promedioAlumno% </div>";
+                      }
                     }
+
                     ?>
                   </td>
                 </tr>
                 <?php
               }
-            }else{
+            } else {
               ?>
-               </tbody>
-            </table>
-              <div class="alert alert-warning">
-                <h3>Aún no hay alumnos que tengan asistencias</h3>
-            </div>
-              <?php
+            </tbody>
+          </table>
+          <div class="alert alert-warning">
+            <h3>Aún no hay alumnos que tengan asistencias</h3>
+          </div>
+          <?php
             }
 
             ?>
-          </tbody>
+        </tbody>
         </table>
         <?php
         ?>
@@ -167,6 +187,7 @@ include("../Clases/Parametro.php");
     }
   </style>
   <script src="../../QuienVino/Resources/js/bootstrap.bundle.min.js"></script>
+  <script src="./JS/fetchJsContar.js"></script>
 </body>
 
 </html>

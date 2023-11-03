@@ -16,6 +16,10 @@ class Alumno extends Persona
     $listarAlumnos = ("SELECT * FROM alumno ORDER BY apellido ASC");
     return $listarAlumnos;
   }
+  public static function listarAlumnosDNI($dni){
+    $listarAlumnos = ("SELECT * FROM alumno WHERE dni LIKE '$dni%'");
+    return $listarAlumnos;
+  }
   public static function listarAlumnosConAsistencias()
   {
     $listarQuery = ("SELECT ast.id,a.dni,a.nombre,a.apellido,ast.fecha_asistencia FROM (alumno AS a INNER JOIN asistencia as ast ON a.dni=ast.dni) ORDER BY a.apellido ASC, a.nombre, ast.fecha_asistencia");
@@ -74,6 +78,22 @@ class Alumno extends Persona
     }
     //ahora vemos si existe una asistencia en la BD con la misma fecha de la asistencia que vamos a ingresar.
 
+  }
+
+  public static function busquedaDNI($dni){
+    $query=("SELECT a.id,a.dni,al.nombre,al.apellido,a.fecha_asistencia FROM (asistencia as a inner join alumno as al on a.dni=al.dni) WHERE a.dni LIKE '$dni%'");
+    return $query;
+  }
+
+  public static function getAsistencia($dni,$date){
+    $query=("SELECT a.id,a.dni,al.apellido,al.nombre,a.fecha_asistencia FROM alumno as al inner join asistencia as a on al.dni=a.dni WHERE a.dni='$dni' AND a.fecha_asistencia LIKE '$date%'");
+    return $query;
+  }
+
+  public static function busquedaDNICantidad($dni)
+  {
+    $contarQuery = ("SELECT al.dni, al.nombre, al.apellido, COUNT(*) AS Asistencias FROM (asistencia AS a INNER JOIN alumno AS al ON al.dni=a.dni) WHERE a.dni LIKE '$dni%' GROUP BY  al.dni, al.nombre, al.apellido ORDER BY al.apellido ASC");
+    return $contarQuery;
   }
 
   

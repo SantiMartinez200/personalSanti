@@ -31,7 +31,7 @@ date_default_timezone_set('America/Argentina/Buenos_Aires');
         $apellidoInsertar = $_POST["apellido"];
         $dniInsertar = $_POST["dni"];
         $fechaNacimiento = $_POST["fechaNacimiento"];
-        if ((strlen($nombreInsertar) < 30) && (strlen($apellidoInsertar) < 30) && (($dniInsertar < 99999999) && ($dniInsertar > 0)) && ($edad >= $fetchParams->edad_minima)) {
+        if ((strlen($nombreInsertar) < 30) && (strlen($apellidoInsertar) < 30) && (($dniInsertar < 99999999) && ($dniInsertar > 0)) && (($edad >= $fetchParams->edad_minima) && ($fetchParams->edad_minima <> NULL))) {
           if ((preg_match("/^[a-zA-Z\p{L}\s]+$/i", $nombreInsertar)) && (preg_match("/^[a-zA-Z\p{L}\s]+$/i", $apellidoInsertar))) {
             $alumno = new Alumno($nombreInsertar, $apellidoInsertar, $dniInsertar, $fechaNacimiento);
             $sql = Alumno::insertAlumno($alumno);

@@ -35,8 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') { ?>
         var_dump($fetchParams);
         $caughtDate = $_POST["fechaNacimiento"];
 
-        //echo $caughtDNI;
-        if ((strlen($caughtName) < 30) && (strlen($caughtSurname) < 30) && (($dniColocado < 99999999) && ($dniColocado > 0) && ($DNIoriginal < 99999999) && ($DNIoriginal > 0)) && ($edad > $fetchParams->edad_minima)) {
+        if ((strlen($caughtName) < 30) && (strlen($caughtSurname) < 30) && (($dniColocado < 99999999) && ($dniColocado > 0) && ($DNIoriginal < 99999999) && ($DNIoriginal > 0)) && (($edad >= $fetchParams->edad_minima) && ($fetchParams->edad_minima <> NULL))) {
           if ((preg_match("/^[a-zA-Z\p{L}\s]+$/i", $caughtName)) && (preg_match("/^[a-zA-Z\p{L}\s]+$/i", $caughtSurname))) {
             $conectarDB = new Conexion();
             $conectarDB->connect();
@@ -59,7 +58,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') { ?>
           }
         } else {
           echo "<script>alert('Revise los parámetros ingresados.');
-                  window.location='ABM_Alumno.php'</script>";
+                  window.location='Modificacion.php?dni=$DNIoriginal'</script>";
         }
       } else {
         echo "<script>alert('Existió algún vacio'); window.location='../Alumno/ABM_Alumno.php'</script>";

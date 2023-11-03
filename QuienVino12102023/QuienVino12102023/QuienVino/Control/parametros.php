@@ -20,7 +20,7 @@ Menú Configuración, que aparezca DIAS DE CLASE, guardarlos en la base de datos
     <div class="container-fluid">
       <a href="../index.php">
         <div class="redondo">
-          <img src="../Multimedia/logo.png" class="logo">
+          <img src="../Multimedia/logo2.png" class="logo">
         </div>
       </a>
       <div class="d-flex justify-content-end">
@@ -79,7 +79,7 @@ Menú Configuración, que aparezca DIAS DE CLASE, guardarlos en la base de datos
     <div class="container d-flex justify-content-center align-items-center w-75 bg-light text-center mt-5 rounded p-2">
       <form action="./actualizarParametros.php" class="form-control rounded  p-3" method="POST">
         <div class="row">
-          <h2 class="form_control"><b>Parametros</b>
+          <div class="bg-primary"><h2 class="form_control bg-primary text-light"><b>Parametros</b></div>
             <h2>
         </div>
         <div class="container d-flex justify-content-center">
@@ -113,7 +113,7 @@ Menú Configuración, que aparezca DIAS DE CLASE, guardarlos en la base de datos
                 value="<?php print($listadoParametros->edad_minima); ?>">
             </div>
             <div>
-              <input type="submit" class="btn btn-dark mt-5" value="Aplicar cambios">
+              <input type="submit" class="btn btn-outline-primary mt-5" value="Aplicar cambios">
             </div>
           </div>
         </div>

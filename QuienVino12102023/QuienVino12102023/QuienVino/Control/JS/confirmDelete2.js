@@ -19,13 +19,13 @@ function mandar_php(codigo) {
   parametros = { id: codigo };
   $.ajax({
     data: parametros,
-    url: "../Control/eliminarAsistencia2.php",
+    url: "../QuienVino/Control/eliminarAsistencia2.php",
     type: "POST",
     beforeSend: function () {},
     success: function () {
       Swal.fire("Eliminado!", "Has eliminado el regisro.", "success").then(
         (result) => {
-          window.location.href = "../Control/listarAsistencias.php";
+          window.location.href = "../QuienVino/index.php";
         }
       );
     },
