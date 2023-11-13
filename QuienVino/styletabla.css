@@ -5,6 +5,9 @@ th, td {
   padding-right: 40px;
 }
 
+body{
+  background-color: rgb(61, 61, 61);
+}
 
 .redondo{
   width: 45px;
@@ -23,18 +26,6 @@ th, td {
 a:link, a:visited, a:active{
   text-decoration: none;
   color: white;
-}
-
-b{
-  text-decoration: none;
-}
-
-body{
-  background-color: rgb(61, 61, 61);
-}
-
-html,body{
-  overflow-x: hidden;
 }
 
 .config{
@@ -83,3 +74,44 @@ html,body{
     background: black;
   }
 
+  .divP{
+    width: 80%;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border-radius: 3px;
+    color: white;
+    font-size: 14px;
+    background-color: #198754;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;;
+  }
+
+  .divR{
+    width: 80%;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border-radius: 3px;
+    color: white;
+    font-size: 14px;
+    background-color: #f2b704;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;;
+  }
+
+    .divL{
+    width: 80%;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border-radius: 3px;
+    color: white;
+    font-size: 14px;
+    background-color: #dc3545;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;;
+  }

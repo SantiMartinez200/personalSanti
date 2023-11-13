@@ -1,0 +1,15 @@
+lista de errores en el archivo de ABM.
+	error 1: Entrada de Claves duplicada (DNI ya existe en la base de datos).
+	error 2: Error desconocido; producido por fechas/valores inválidos
+	error 3: Ingreso de Nombre/Apellido con carácteres especiales o números.
+	error 4: La longitud de los carácteres no es la adecuada. (Campos negativos o muy largos).
+	error 5: Campo vacío.
+	error 6: La carga de datos fue exitosa.
+
+Lista de errores en el archivo de Asistencias tardías.
+  true: La asistencia tardía fue registrada con éxito.
+  false: La fecha tardía no fue registrada. (Ya existe una asistencia en esa fecha).
+  err1: Campos vacíos (DNI o Fecha).
+  fatal: No se encontró el DNI para realizar el registro.
+
+Lista de errores en el archivo de Parámetros.

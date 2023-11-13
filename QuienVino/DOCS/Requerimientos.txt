@@ -1,0 +1,45 @@
+Trabajo grupal sobre un sistema de asistencias.
+
+El sistema de toma de asistencias debe utilizar:
+- PHP como Backend.
+-En PHP con POO : Los objetos deben utilizar la Herencia, Traits, Encapsulamiento, Funciones estáticas.
+- En HTML se deberá utilizar: Bootstrap, JavaScript para interactividad.
+
+- Como Base de datos: 
+	MySQL, MariaDB, o a especificar; que persista (Guarde los datos).
+
+- El sistema deberá realizar Altas, bajas y modificación en los registros de la tabla de alumnos, que tiene los atributos de: nombre, apellido, dni, fecha de nacimiento (Pueden agregarse atributos opcionales).
+
+- El sistema deberá ser capaz de cargar asistencias mediante un DNI de persona.
+
+- El sistema deberá calcular porcentajes de asistencias en base a parámetros.
+
+- El sistema deberá realizar las validaciones correspondientes.
+
+- El listado de los alumnos debe ser realizado alfabéticamente por apellido.
+
+- Diseñar una interfaz gráfica, con logotipos y nombres de proyecto.
+
+- Armar un archivo de Deploy.txt -Link a github, con pasos para poner en marcha el sistema.
+                                    Paso 1: URL
+                                    Paso 2: BD, Que puede arrancar vacía o cargada.
+                                    Paso 3: (para mas info, ir a GH, Ver un README o DEPLOY)
+
+- El sistema debe identificar si el Alumno cumple años, de lo contrario; seguir con su funcionamiento normalmente.
+
+- El sistema debe ser capaz de registrar asistencias tardías; una asistencia tardía es aquella que es cargada a un día anterior al actual.
+
+- El sistema debe ser capaz de registrar asistencias con retraso, con una tolerancia previamente seteada como parámetro.
+
+- El sistema debe tener un horario de clases seteado como parámetro.
+
+- Si un alumno no llega a horario de clases, y todavía llega más tarde que el horario con tolerancia; el sistema no debe cargar su asistencia.
+
+EXTRA:
+- El sistema debe tener una sección por separado, que va a indicar datos extras como:
+      * Los alumnos que promocionan
+      * Los alumnos que están regulares
+      * Los alumnos que están libres
+      * El alumno con más asistencias
+      * El alumno con menos asistencias
+      * Los alumnos SIN asistencias.

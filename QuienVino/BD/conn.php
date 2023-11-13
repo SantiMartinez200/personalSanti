@@ -1,18 +1,34 @@
 <?php
 class Conexion
 {
-  public static function connect()
-  {
-    $mysql = new mysqli('localhost','root','','sistemaasistencia');
-    $mysql->set_charset('utf8');
+  private $host = "localhost";
+  private $contrasena = "";
+  private $bd = "sistemaasistencia";
+  private $usuario = "root";
 
-    if (mysqli_connect_errno()){
+  private $conn;
+  public  function __construct()
+  {
+    $this->conn = new mysqli($this->host, $this->usuario, $this->contrasena, $this->bd);
+    if (mysqli_connect_errno()) {
       echo "<p hidden>Falló la conexion</p>";
-    }else{
+    } else {
       echo "<p hidden>conexión exitosa</p>";
     }
-    return $mysql;
   }
+  public function connect(){
+    $this->conn;
+  }
+
+   public function killConn() {
+        $this->conn->close();
+    }
+
+  public function ejecutar($consulta)
+  {
+    return $this->conn->query($consulta);
+  }
+
 }
 
 // Function desconectar mysqli_close($this->$mysql);
